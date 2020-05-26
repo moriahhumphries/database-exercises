@@ -1,11 +1,15 @@
 USE codeup_test_db;
+SHOW TABLES;
 
-create table if not exists albums (
-    id integer,
-    artist string,
-    name string,
-    release_date integer,
-    sales float,
-    genre string
+drop table if exists albums;
+
+create table albums (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    artist varchar(100) not null,
+    name carchar(100) not null,
+    release_date int not null,
+    sales decimal(6, 3) not null,
+    genre varchar(100),
+    primary key (id)
 );
 
