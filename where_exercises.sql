@@ -1,0 +1,69 @@
+# 1
+use employees;
+
+# 2
+SELECT *
+FROM employees
+where first_name IN ('Irena', 'Vidya', 'Maya');
+
+# 3
+SELECT *
+FROM employees
+where last_name like 'E%';
+
+# 4
+Select *
+from employees
+where hire_date between '1990-01-01' and '1999-12-31';
+
+# 5
+SELECT *
+from employees
+where birth_date like '%-12-25';
+
+#6
+SELECT *
+from employees
+where last_name like '%q%';
+
+#1.1
+SELECT *
+FROM employees
+where first_name = 'Irena'
+   OR first_name = 'Vidya'
+   OR first_name = 'Maya';
+#2.1
+SELECT *
+FROM employees
+where (first_name = 'Irena'
+    OR first_name = 'Vidya'
+    OR first_name = 'Maya')
+  AND gender = 'M';
+
+#3.1
+SELECT *
+FROM employees
+where last_name like 'E%'
+   OR last_name like '%E';
+#4.1
+SELECT *
+FROM employees
+where last_name like 'E%'
+  AND last_name like '%E';
+
+#5.1
+SELECT *
+from employees
+where birth_date like '%-12-25'
+  AND hire_date between '1990-01-01' and '1999-12-31';
+
+#6.1
+
+SELECT *
+from employees
+where last_name like '%q%'
+  and last_name not like '%qu%';
+
+
+
+
