@@ -21,7 +21,9 @@ group by last_name;
 select distinct first_name, last_name
 from employees
 where last_name like 'E%'
-  AND last_name like '%E';
+  AND last_name like '%E'
+group by  first_name, last_name
+order by last_name;
 
 #5
 SELECT distinct last_name, count(last_name)
