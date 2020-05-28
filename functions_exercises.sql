@@ -49,14 +49,14 @@ where last_name like 'E%'
    OR last_name like '%E'
 order by emp_no;
 #4.1
-SELECT concat(first_name, ' ', last_name) as 'fullName'
+SELECT concat(first_name, ' ', last_name) as 'Full Name', gender, hire_date, emp_no, birth_date
 FROM employees
 where last_name like 'E%'
   AND last_name like '%E'
 order by emp_no;
 
 #5.1
-SELECT concat(first_name, ' ', last_name, ' ', (datediff(now(), hire_date))) as 'Full name and days since hired'
+SELECT concat(first_name, ' ', last_name, ' ', datediff(now(), hire_date)) as 'Full name and days since hired'
 from employees
 where birth_date like '%-12-25'
   AND hire_date between '1990-01-01' and '1999-12-31'
