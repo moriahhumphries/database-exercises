@@ -13,3 +13,6 @@ create table albums (
     primary key (id)
 );
 
+alter table albums
+add unique (artist, name);
+
