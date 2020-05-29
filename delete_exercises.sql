@@ -1,8 +1,7 @@
--- select * from albums where release_date > 1991;
+use codeup_test_db;
+
 delete from albums where release_date > 1991;
 
--- select * from albums where genre = 'disco';
 delete from albums where genre = 'disco';
 
--- select * from albums where artist = 'James Horner';
 delete from albums where artist = 'James Horner';
