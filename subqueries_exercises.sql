@@ -27,3 +27,8 @@ WHERE emp_no IN (
     FROM dept_manager
     WHERE to_date > NOW()
 ) AND gender = 'F';
+
+select *
+from employees
+order by first_name
+limit 10 offset 5;
